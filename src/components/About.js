@@ -19,13 +19,25 @@ const About = () => {
         <p>
           These are some of the technologies I've been working with recently:
         </p>
-        <ul>
-          <li>JavaScript (ES6)</li>
-          <li>React</li>
-          <li>Redux</li>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>Sequelize</li>
+        <ul className="tech">
+          <li>
+            <i className="fas fa-angle-double-right"></i>JavaScript (ES6)
+          </li>
+          <li>
+            <i className="fas fa-angle-double-right"></i>React
+          </li>
+          <li>
+            <i className="fas fa-angle-double-right"></i>Redux
+          </li>
+          <li>
+            <i className="fas fa-angle-double-right"></i>Node.js
+          </li>
+          <li>
+            <i className="fas fa-angle-double-right"></i>Express
+          </li>
+          <li>
+            <i className="fas fa-angle-double-right"></i>Sequelize
+          </li>
         </ul>
       </div>
     </div>
