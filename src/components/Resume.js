@@ -1,9 +1,12 @@
 import React from 'react';
+import { Typography, Container } from '@material-ui/core';
 
 const Resume = () => {
   return (
-    <div className="container">
-      <h1>Resume</h1>
+    <div>
+      <Container maxWidth="md">
+        <Typography variant="h3">Resume</Typography>
+      </Container>
     </div>
   );
 };
