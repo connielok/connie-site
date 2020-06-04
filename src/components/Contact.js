@@ -1,63 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Form from './Form';
 import { Typography, Container } from '@material-ui/core';
 
-class Contact extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      name: '',
-      email: '',
-      message: '',
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-  handleChange(event) {
-    this.setState({
-      [event.target.id]: event.target.value,
-    });
-  }
+  const handleChange = (e) => {
+    if (e.target.id === 'name') {
+      setName(e.target.value);
+    }
+    if (e.target.id === 'email') {
+      setEmail(e.target.value);
+    }
+    if (e.target.id === 'message') {
+      setMessage(e.target.value);
+    }
+  };
 
-  handleSubmit(event) {
-    event.preventDefault();
-    this.setState({
-      name: '',
-      email: '',
-      message: '',
-    });
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setName('');
+    setEmail('');
+    setMessage('');
+  };
 
-  render() {
-    return (
-      <div>
-        <Container maxWidth="md">
-          <Typography variant="h3">Get in Touch</Typography>
-          <div className="contact">
-            <p>I am currently looking for new opportunities.</p>
-            <p>
-              If you are interested in working together, please send me a
-              message here or through{' '}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.linkedin.com/in/conniehlok/"
-              >
-                Linkedin
-              </a>
-              .
-            </p>
-          </div>
-          <Form
-            {...this.state}
-            handleChange={this.handleChange}
-            handleSubmit={this.handleSubmit}
-          />
-        </Container>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <Container maxWidth="md">
+        <Typography variant="h3">Get in Touch</Typography>
+        <div className="contact">
+          <p>I am currently looking for new opportunities.</p>
+          <p>
+            If you are interested in working together, please send me a message
+            here or through{' '}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/conniehlok/"
+            >
+              Linkedin
+            </a>
+            .
+          </p>
+        </div>
+        <Form
+          name={name}
+          email={email}
+          message={message}
+          handleSubmit={handleSubmit}
+          handleChange={handleChange}
+        />
+      </Container>
+    </div>
+  );
+};
 
 export default Contact;

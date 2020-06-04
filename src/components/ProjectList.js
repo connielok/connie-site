@@ -1,115 +1,59 @@
 import React from 'react';
-import {
-  Typography,
-  Container,
-  Grid,
-  Card,
-  CardMedia,
-  CardContent,
-  Button,
-  CardActions,
-} from '@material-ui/core';
+import { Typography, Container, Grid } from '@material-ui/core';
 import projectimg from './projectimg.png';
+import Projects from './Projects';
 
-const ProjectList = () => {
-  return (
-    <div className="project-list">
-      <Container maxWidth="md">
-        <Typography variant="h3">Projects</Typography>
-        <div className="projects">
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6} lg={4} xl={3}>
-              <Card>
-                <CardMedia
-                  image={projectimg}
-                  title="project-image"
-                  style={{ height: 200 }}
-                  component="img"
-                />
-                <CardContent>
-                  <Typography variant="h5">Project Name</Typography>
-                  <Typography variant="body2">Project Details</Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    Share
-                  </Button>
-                  <Button size="small" color="primary">
-                    Read More
-                  </Button>
-                </CardActions>
-              </Card>
+const projectsArr = [
+  {
+    id: 1,
+    title: 'Grace Shopper',
+    image: projectimg,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+  {
+    id: 2,
+    title: 'Stackathon',
+    image: projectimg,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+  {
+    id: 3,
+    title: 'Capstone',
+    image: projectimg,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+];
+
+class ProjectList extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      projects: projectsArr,
+      selectedProject: projectsArr[0],
+    };
+  }
+
+  componentDidMount() {}
+
+  render() {
+    return (
+      <div className="project-list">
+        <Container maxWidth="md">
+          <Typography variant="h3">Projects</Typography>
+          <div className="projects">
+            <Grid container spacing={2}>
+              {this.state.projects.length ? (
+                <Projects projects={this.state.projects} />
+              ) : null}
             </Grid>
-            <Grid item xs={12} sm={6} lg={4} xl={3}>
-              <Card>
-                <CardMedia
-                  image={projectimg}
-                  title="project-image"
-                  style={{ height: 200 }}
-                  component="img"
-                />
-                <CardContent>
-                  <Typography variant="h5">Project Name</Typography>
-                  <Typography variant="body2">Project Details</Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    Share
-                  </Button>
-                  <Button size="small" color="primary">
-                    Read More
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} lg={4} xl={3}>
-              <Card>
-                <CardMedia
-                  image={projectimg}
-                  title="project-image"
-                  style={{ height: 200 }}
-                  component="img"
-                />
-                <CardContent>
-                  <Typography variant="h5">Project Name</Typography>
-                  <Typography variant="body2">Project Details</Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    Share
-                  </Button>
-                  <Button size="small" color="primary">
-                    Read More
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          </Grid>
-          {/* <div className="project-group">
-            <h4>Project 1</h4>
-            <div>
-              <img src="" alt="project pic" />
-            </div>
-            <p>blurb about project</p>
           </div>
-          <div className="project-group">
-            <h4>Project 2</h4>
-            <div>
-              <img src="" alt="project pic" />
-            </div>
-            <p>blurb about project</p>
-          </div>
-          <div className="project-group">
-            <h4>Project 3</h4>
-            <div>
-              <img src="" alt="project pic" />
-            </div>
-            <p>blurb about project</p>
-          </div> */}
-        </div>
-      </Container>
-    </div>
-  );
-};
+        </Container>
+      </div>
+    );
+  }
+}
 
 export default ProjectList;

@@ -3,10 +3,12 @@ import { TextField, Button, Grid } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 
 const Form = (props) => {
-  const handleChange = props.handleChange;
-  const handleSubmit = props.handleSubmit;
   return (
-    <form className="contact-form" action="/contact" onSubmit={handleSubmit}>
+    <form
+      className="contact-form"
+      action="/contact"
+      onSubmit={props.handleSubmit}
+    >
       <Grid container spacing={2} direction="column">
         <Grid item>
           <TextField
@@ -15,7 +17,7 @@ const Form = (props) => {
             label="Full Name"
             variant="outlined"
             value={props.name}
-            onChange={handleChange}
+            onChange={props.handleChange}
           />
         </Grid>
         <Grid item>
@@ -25,7 +27,7 @@ const Form = (props) => {
             label="Email"
             variant="outlined"
             value={props.email}
-            onChange={handleChange}
+            onChange={props.handleChange}
           />
         </Grid>
         <Grid item>
@@ -38,11 +40,16 @@ const Form = (props) => {
             label="Message"
             variant="outlined"
             value={props.message}
-            onChange={handleChange}
+            onChange={props.handleChange}
           />
         </Grid>
         <Grid item>
-          <Button variant="contained" color="primary" endIcon={<SendIcon />}>
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            endIcon={<SendIcon />}
+          >
             Send
           </Button>
         </Grid>
