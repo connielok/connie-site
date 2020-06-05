@@ -10,4 +10,17 @@ router.get('/', async (req, res, next) => {
   }
 });
 
+router.get('/:id', async (req, res, next) => {
+  try {
+    const project = await Project.findByPk(req.params.id);
+    if (project) {
+      res.status(200).json(project);
+    } else {
+      res.sendStatus(404);
+    }
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router;

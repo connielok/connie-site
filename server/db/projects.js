@@ -10,6 +10,10 @@ const Project = db.define('project', {
     type: Sequelize.STRING,
     allowNull: false,
   },
+  shortDesc: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
   description: {
     type: Sequelize.TEXT,
     allowNull: false,

@@ -24,7 +24,7 @@ const Projects = (props) => {
           />
           <CardContent>
             <Typography variant="h5">{project.title}</Typography>
-            <Typography variant="body2">{project.description}</Typography>
+            <Typography variant="body2">{project.shortDesc}</Typography>
           </CardContent>
           <CardActions>
             <Button size="small" color="primary">
