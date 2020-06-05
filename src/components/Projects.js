@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Typography,
   Grid,
@@ -29,7 +30,12 @@ const Projects = (props) => {
             <Button size="small" color="primary">
               Share
             </Button>
-            <Button size="small" color="primary">
+            <Button
+              size="small"
+              color="primary"
+              component={Link}
+              to={`/projects/${project.id}`}
+            >
               Read More
             </Button>
           </CardActions>

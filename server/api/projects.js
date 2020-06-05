@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const Project = require('../db/projects');
 
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
-    const projects = Project.findAll();
+    const projects = await Project.findAll();
     res.status(200).json(projects);
   } catch (error) {
     next(error);
