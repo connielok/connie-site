@@ -10,10 +10,6 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/express', (req, res, next) => {
-  res.send('BACKEND IS CONNECTED TO REACT');
-});
-
 app.use('/api', require('./api'));
 
 app.get('/', function(req, res) {
@@ -25,7 +21,6 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use((err, req, res, next) => {
   console.error(err);
   console.error(err.stack);
-  console.log('ERRORRR!!!!');
   res.status(err.status || 500).send(err.message || 'Internal Server Error.');
 });
 
