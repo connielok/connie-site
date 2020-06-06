@@ -23,10 +23,8 @@ const About = () => {
             My background is in electrical engineering. I worked in the
             MEP/construction industry for 4 years before deciding to make a
             switch to the software industry. I love coding like I love puzzles -
-            it may take a while to to figure out the patterns and see things the
-            right frame of mind, but it's so satisfying when all the pieces
-            finally fit together.
-            {/* ...syntax, grammar, learning languages*/}
+            it may take a while to to figure out the patterns, but it's so
+            satisfying when all the pieces finally fit together.
           </Typography>
           <Typography variant="body1">
             These are some of the technologies I've been working with recently:
