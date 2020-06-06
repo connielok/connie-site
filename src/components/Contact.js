@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import Form from './Form';
 import { Typography, Container } from '@material-ui/core';
+import axios from 'axios';
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [sentVerification, setSentVerification] = useState('');
 
   const handleChange = (e) => {
     if (e.target.id === 'name') {
@@ -19,8 +21,14 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const { data } = await axios.post('/api/contact', {
+      name,
+      email,
+      message,
+    });
+    setSentVerification(data.reply);
     setName('');
     setEmail('');
     setMessage('');
@@ -30,28 +38,48 @@ const Contact = () => {
     <div>
       <Container maxWidth="md">
         <Typography variant="h3">Get in Touch</Typography>
-        <div className="contact">
-          <p>I am currently looking for new opportunities.</p>
-          <p>
-            If you are interested in working together, please send me a message
-            here or through{' '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/conniehlok/"
-            >
-              Linkedin
-            </a>
-            .
-          </p>
-        </div>
-        <Form
-          name={name}
-          email={email}
-          message={message}
-          handleSubmit={handleSubmit}
-          handleChange={handleChange}
-        />
+        {sentVerification ? (
+          <div>
+            <Container maxWidth="md">
+              <Typography variant="body2">
+                <span role="img" aria-label="sparkles">
+                  ✨✨✨
+                </span>
+                {sentVerification}
+                <span role="img" aria-label="sparkles">
+                  ✨✨✨
+                </span>
+              </Typography>
+            </Container>
+          </div>
+        ) : (
+          <div>
+            <div className="contact">
+              <Typography variant="body2">
+                I am currently looking for new opportunities.
+              </Typography>
+              <Typography variant="body2">
+                If you are interested in working together, please send me a
+                message here or through{' '}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/conniehlok/"
+                >
+                  Linkedin
+                </a>
+                .
+              </Typography>
+            </div>
+            <Form
+              name={name}
+              email={email}
+              message={message}
+              handleSubmit={handleSubmit}
+              handleChange={handleChange}
+            />
+          </div>
+        )}
       </Container>
     </div>
   );
