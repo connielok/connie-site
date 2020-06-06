@@ -19,10 +19,10 @@ const ProjectList = () => {
   }, []);
 
   return (
-    <div className="project-list">
+    <div className="projects">
       <Container maxWidth="md">
         <Typography variant="h3">Projects</Typography>
-        <div className="projects">
+        <div className="project-list">
           <Grid container spacing={2}>
             {projects.length ? <Projects projects={projects} /> : null}
           </Grid>

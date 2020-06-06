@@ -37,7 +37,7 @@ const Contact = () => {
   return (
     <div>
       <Container maxWidth="md">
-        <Typography variant="h3">Get in Touch</Typography>
+        <Typography variant="h3">Let's Connect</Typography>
         {sentVerification ? (
           <div>
             <Container maxWidth="md">

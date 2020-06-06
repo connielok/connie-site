@@ -11,15 +11,25 @@ import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 // import PageNotFound from './components/PageNotFound';
-import ScopedCssBaseline from '@material-ui/core/ScopedCssBaseline';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import {
   ThemeProvider,
   useTheme,
   createMuiTheme,
 } from '@material-ui/core/styles';
+import { teal, grey } from '@material-ui/core/colors';
 
-const theme = createMuiTheme();
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: teal[500],
+    },
+    secondary: {
+      main: grey[50],
+    },
+  },
+});
+console.log(theme);
 
 function useWidth() {
   const theme = useTheme();
@@ -33,30 +43,28 @@ function useWidth() {
   );
 }
 
-function App() {
+const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <ScopedCssBaseline>
-        <div>
-          <Router>
-            <Header />
-            <Nav useWidth={useWidth} />
-            <Switch>
-              <Route path="/about" component={About} />
-              <Route path="/projects/:id" component={SingleProject} />
-              <Route path="/projects" component={ProjectList} />
-              <Route path="/resume" component={Resume} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/" exact component={Home} />
-              {/* <Route component={PageNotFound} /> */}
-              {/* 404 page routing does not work!! */}
-            </Switch>
-            <Footer />
-          </Router>
-        </div>
-      </ScopedCssBaseline>
+      <div>
+        <Router>
+          <Header />
+          <Nav useWidth={useWidth} />
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/projects/:id" component={SingleProject} />
+            <Route path="/projects" component={ProjectList} />
+            <Route path="/resume" component={Resume} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/" exact component={Home} />
+            {/* <Route component={PageNotFound} /> */}
+            {/* 404 page routing does not work!! */}
+          </Switch>
+          <Footer />
+        </Router>
+      </div>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

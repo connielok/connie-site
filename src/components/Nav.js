@@ -12,13 +12,13 @@ const Nav = (props) => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" className="nav">
       <Tabs
         onChange={handleNavChange}
         value={`${value}`}
         indicatorColor="secondary"
         textColor="secondary"
-        variant={width === 'xs' ? 'scrollable' : null}
+        variant={width === 'xs' || width === 's' ? 'scrollable' : null}
         centered={width !== 'xs'}
       >
         <Tab label="Home" component={Link} to={'/'} value="0" />
@@ -27,31 +27,6 @@ const Nav = (props) => {
         <Tab label="Resume" component={Link} to={'/resume'} value="3" />
         <Tab label="Contact" component={Link} to={'/contact'} value="4" />
       </Tabs>
-      {/* <Grid container spacing={2}>
-        <Grid item>
-          <Button component={Link} to={'/about'}>
-            About
-          </Button>
-        </Grid>
-
-        <Grid item>
-          <Button component={Link} to={'/projects'}>
-            Projects
-          </Button>
-        </Grid>
-
-        <Grid item>
-          <Button component={Link} to={'/resume'}>
-            Resume
-          </Button>
-        </Grid>
-
-        <Grid item>
-          <Button component={Link} to={'/contact'}>
-            Contact
-          </Button>{' '}
-        </Grid>
-      </Grid> */}
     </AppBar>
   );
 };

@@ -15,7 +15,7 @@ const projects = [
     id: 2,
     title: 'Stackathon',
     image: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
-    shortDesc: 'A stackathon app.',
+    shortDesc: 'Stackathon project.',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
@@ -23,7 +23,7 @@ const projects = [
     id: 3,
     title: 'Capstone',
     image: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
-    shortDesc: 'Capstone project built using NERDS',
+    shortDesc: 'Capstone project.',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },

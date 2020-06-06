@@ -27,9 +27,9 @@ const Projects = (props) => {
             <Typography variant="body2">{project.shortDesc}</Typography>
           </CardContent>
           <CardActions>
-            <Button size="small" color="primary">
+            {/* <Button size="small" color="primary">
               Share
-            </Button>
+            </Button> */}
             <Button
               size="small"
               color="primary"

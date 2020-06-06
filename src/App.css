@@ -5,24 +5,6 @@
   padding: 0;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-}
-
-.header a {
-  text-decoration: none;
-}
-
-.header a:visited {
-  color: rgba(0, 0, 0, .87);
-  text-decoration: none;
-}
-
-.project-list {
-  margin-bottom: 2rem;
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -33,7 +15,18 @@ body {
   margin: .6rem 0;
 }
 
+.project-list {
+  margin: .6rem 0;
+}
+
 .contact-form {
   padding: 1rem 0;
 }
 
+.nav {
+  margin-bottom: 1.5rem;
+}
+
+.footer {
+  margin-top: 1.5rem
+}

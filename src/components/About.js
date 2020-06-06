@@ -20,23 +20,16 @@ const About = () => {
             I'm a software engineer based in NYC.
           </Typography>
           <Typography variant="body1">
-            My background is in electrical engineering. I worked in the
-            MEP/construction industry for 4 years before deciding to make a
-            switch to the software industry. I love coding like I love puzzles -
-            it may take a while to to figure out the patterns, but it's so
-            satisfying when all the pieces finally fit together.
+            I love coding like I love puzzles - it may take a while to to figure
+            out the patterns, but it's so satisfying when all the pieces finally
+            fit together. I worked in the MEP/construction industry as an
+            electrical engineer for 4 years before deciding to make a switch to
+            the software industry.
           </Typography>
           <Typography variant="body1">
             These are some of the technologies I've been working with recently:
           </Typography>
-          <List className="tech" dense>
-            <ListItem>
-              <ListItemIcon>
-                <DoubleArrowIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary="JavaScript (ES6)" />
-            </ListItem>
-
+          <List className="tech" dense disablePadding>
             <ListItem>
               <ListItemIcon>
                 <DoubleArrowIcon fontSize="small" />
