@@ -62,7 +62,7 @@ const About = () => {
               <ListItemIcon>
                 <DoubleArrowIcon fontSize="small" />
               </ListItemIcon>
-              <ListItemText primary="Sequuelize" />
+              <ListItemText primary="Sequelize" />
             </ListItem>
 
             <ListItem>
