@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api', require('./api'));
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'build', '/public/index.html'));
+  res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 app.use(express.static(path.join(__dirname, 'build')));
