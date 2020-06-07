@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Form from './Form';
-import { Typography, Container } from '@material-ui/core';
+import { Typography, Container, Link } from '@material-ui/core';
 import axios from 'axios';
 
 const Contact = () => {
@@ -61,13 +61,13 @@ const Contact = () => {
               <Typography variant="body2">
                 If you are interested in working together, please send me a
                 message here or through{' '}
-                <a
+                <Link
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://www.linkedin.com/in/conniehlok/"
                 >
                   Linkedin
-                </a>
+                </Link>
                 .
               </Typography>
             </div>

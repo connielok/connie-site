@@ -29,7 +29,6 @@ const theme = createMuiTheme({
     },
   },
 });
-console.log(theme);
 
 function useWidth() {
   const theme = useTheme();
