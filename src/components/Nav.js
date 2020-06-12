@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Tabs, Tab } from '@material-ui/core';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
 
 const Nav = (props) => {
   const [value, setValue] = useState(0);
-  const width = props.useWidth();
+  const width = useWidth();
 
   const handleNavChange = (e, value) => {
     setValue(value);
@@ -30,5 +32,17 @@ const Nav = (props) => {
     </AppBar>
   );
 };
+
+function useWidth() {
+  const theme = useTheme();
+  const keys = [...theme.breakpoints.keys].reverse();
+  return (
+    keys.reduce((output, key) => {
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      const matches = useMediaQuery(theme.breakpoints.up(key));
+      return !output && matches ? key : output;
+    }, null) || 'xs'
+  );
+}
 
 export default Nav;
