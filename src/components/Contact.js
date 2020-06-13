@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import Form from './Form';
 import { Typography, Container, Link } from '@material-ui/core';
-import axios from 'axios';
+// import axios from 'axios';
+
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -23,12 +29,20 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { data } = await axios.post('/api/contact', {
-      name,
-      email,
-      message,
-    });
-    setSentVerification(data.reply);
+    // const { data } = await axios.post('/api/contact', {
+    //   name,
+    //   email,
+    //   message,
+    // });
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', name, email, message }),
+    })
+      .then(() => alert('Success!'))
+      .catch((error) => alert(error));
+    setSentVerification('Thank you for your message!');
     setName('');
     setEmail('');
     setMessage('');
