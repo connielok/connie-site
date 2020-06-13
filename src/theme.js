@@ -8,19 +8,32 @@ const theme = {
     },
     secondary: {
       main: '#fafafa',
+      dark: '#fafafa',
+      light: '#000000',
     },
     divider: '#BDBDBD',
   },
-  // overrides: {
-  //   MuiTab: {
-  //     root: {
-  //       color: 'white',
-  //       '&:hover': {
-  //         backgroundColor: 'purple',
-  //       },
-  //     },
-  //   },
-  // },
+  overrides: {
+    MuiAppBar: {
+      root: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+      },
+    },
+    MuiContainer: {
+      root: {
+        paddingTop: '3rem',
+      },
+    },
+    // MuiTab: {
+    //   root: {
+    //     color: 'white',
+    //     '&:hover': {
+    //       backgroundColor: 'purple',
+    //     },
+    //   },
+    // },
+  },
 };
 
 export default theme;

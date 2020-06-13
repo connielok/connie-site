@@ -1,20 +1,28 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Header from './Header';
-// import Nav from './Nav';
 import Home from './Home';
 import About from './About';
 import ProjectList from './ProjectList';
 import SingleProject from './SingleProject';
 import Resume from './Resume';
 import Contact from './Contact';
-import Footer from './Footer';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  '@global': {
+    'html, body, #root': {
+      height: '100%',
+    },
+  },
+  main: {
+    minHeight: '90vh',
+  },
+}));
 
 const Main = () => {
+  const classes = useStyles();
   return (
-    <div>
-      <Header />
-      {/* <Nav useWidth={useWidth} /> */}
+    <div id="main" className={classes.main}>
       <Switch>
         <Route path="/about" component={About} />
         <Route path="/projects/:id" component={SingleProject} />
@@ -25,7 +33,6 @@ const Main = () => {
         {/* <Route component={PageNotFound} /> */}
         {/* 404 page routing does not work!! */}
       </Switch>
-      <Footer />
     </div>
   );
 };
