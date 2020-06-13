@@ -10,7 +10,6 @@ import { HashRouter as Router } from 'react-router-dom';
 const App = () => {
   const [theme, toggleTheme] = useDarkMode();
   const themeConfig = createMuiTheme(theme);
-  console.log(theme);
   return (
     <MuiThemeProvider theme={themeConfig}>
       <div id="app">

@@ -34,6 +34,11 @@ const theme = {
     //   },
     // },
   },
+  props: {
+    MuiTypography: {
+      gutterBottom: true,
+    },
+  },
 };
 
 export default theme;
