@@ -34,14 +34,15 @@ const Contact = () => {
     //   email,
     //   message,
     // });
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', name, email, message }),
-    })
-      .then(() => alert('Success!'))
-      .catch((error) => alert(error));
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'contact-form', name, email, message }),
+      });
+    } catch (error) {
+      console.log('Error sending form: ', error);
+    }
     setSentVerification('Thank you for your message!');
     setName('');
     setEmail('');
