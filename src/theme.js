@@ -14,12 +14,6 @@ const theme = {
     divider: '#BDBDBD',
   },
   overrides: {
-    MuiAppBar: {
-      root: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-      },
-    },
     MuiContainer: {
       root: {
         paddingTop: '3rem',
