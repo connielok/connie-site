@@ -13,9 +13,8 @@ const About = () => {
   return (
     <div>
       <Container maxWidth="md">
-        <Typography variant="h3">About Me</Typography>
+        <Typography variant="h3">Hi, I'm Connie.</Typography>
         <div className="about">
-          <Typography variant="h5">Hi, I'm Connie.</Typography>
           <Typography variant="body1">
             I'm a software engineer based in NYC.
           </Typography>

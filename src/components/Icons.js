@@ -4,7 +4,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 
-const Icons = () => {
+const Icons = (props) => {
   return (
     <div style={{ paddingTop: '1rem' }}>
       <Grid container direction="column" align="center">
