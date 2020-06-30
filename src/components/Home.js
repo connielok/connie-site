@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Container } from '@material-ui/core';
+import { Typography, Container, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import landingImage from './img/home-girl-interests.png';
 
@@ -8,9 +8,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       height: '15rem',
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       height: '30rem',
     },
+  },
+  credit: {
+    fontSize: '0.5rem',
+    fontWeight: 300,
   },
 }));
 
@@ -41,6 +45,17 @@ const Home = () => {
           src={landingImage}
           alt="girl coder and other interests"
         />
+        <Typography variant="caption" className={classes.credit}>
+          illustration by{' '}
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://icons8.com/"
+          >
+            {' '}
+            icons8.com{' '}
+          </Link>
+        </Typography>
       </Container>
     </div>
   );

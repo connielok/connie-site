@@ -15,6 +15,10 @@ import HomeIcon from '@material-ui/icons/Home';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    // color:
+    //   theme.type === 'light'
+    //     ? theme.palette.primary.main
+    //     : theme.palette.primary.dark,
   },
   tab: {
     minWidth: 90,
@@ -24,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   nav: {
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
   },
   toggle: {
     marginLeft: theme.spacing(2),
@@ -44,33 +48,30 @@ const Nav = (props) => {
   return (
     <AppBar position="static" className={classes.root}>
       <Toolbar className={classes.nav}>
-        <Link to={'/'}>
-          <HomeIcon color="textPrimar" />
-        </Link>
         <Tabs
           onChange={handleNavChange}
           value={`${value}`}
           variant={width === 'xs' || width === 's' ? 'scrollable' : null}
         >
-          {/* <Tab
-            label="Home"
+          <Tab
+            label={<HomeIcon />}
             component={Link}
             to={'/'}
             value="0"
             className={classes.tab}
-          /> */}
+          />
           <Tab
             label="About"
             component={Link}
             to={'/about'}
-            value="0"
+            value="1"
             className={classes.tab}
           />
           <Tab
             label="Projects"
             component={Link}
             to={'/projects'}
-            value="1"
+            value="2"
             className={classes.tab}
           />
           {/* <Tab
@@ -84,7 +85,7 @@ const Nav = (props) => {
             label="Contact"
             component={Link}
             to={'/contact'}
-            value="2"
+            value="3"
             className={classes.tab}
           />
           <FormControlLabel

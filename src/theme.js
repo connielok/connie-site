@@ -3,15 +3,14 @@ const theme = {
     type: 'light',
     primary: {
       main: '#7da8c7',
-      dark: '#00796B',
-      light: '#B2DFDB',
+      // dark: '#2A4B62',
+      // light: '#ACC8DC',
     },
     secondary: {
       main: '#fafafa',
-      dark: '#fafafa',
-      light: '#000000',
+      // dark: '#fafafa',
+      // light: '#000000',
     },
-    divider: '#BDBDBD',
   },
   typography: {
     fontFamily: 'Lato,"Helvetica Neue",Helvetica,Arial,sans-serif',
@@ -22,27 +21,29 @@ const theme = {
         paddingTop: '3rem',
       },
     },
+    MuiSvgIcon: {
+      root: {
+        color: '#000',
+      },
+    },
     // MuiTab: {
     //   wrapper: {
     //     fontSize: 'larger',
     //   },
     // },
 
-    // MuiTab: {
-    //   root: {
-    //     color: 'white',
-    //     '&:hover': {
-    //       backgroundColor: 'purple',
-    //     },
-    //   },
-    // },
+    MuiTab: {
+      textColorInherit: {
+        color: '#000',
+        // '&:hover': {
+        //   backgroundColor: 'purple',
+        // },
+      },
+    },
   },
   props: {
     MuiTypography: {
       paragraph: 'true',
-    },
-    MuiSvgIcon: {
-      htmlColor: '#000000',
     },
   },
 };
