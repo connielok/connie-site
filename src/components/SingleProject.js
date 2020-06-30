@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Typography, Container } from '@material-ui/core';
 // import axios from 'axios';
 import projectsArr from '../projects';

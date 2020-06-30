@@ -1,10 +1,12 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
+import Icons from './Icons';
 
 const Footer = () => {
   return (
     <div className="footer" style={{ marginTop: 'auto' }}>
-      <Grid item container spacing={3} justify="center">
+      <Icons />
+      <Grid container spacing={3} justify="center">
         <Grid item>
           <Typography variant="caption">Connie Lok</Typography>
         </Grid>

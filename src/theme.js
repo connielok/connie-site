@@ -2,7 +2,7 @@ const theme = {
   palette: {
     type: 'light',
     primary: {
-      main: '#009688',
+      main: '#7da8c7',
       dark: '#00796B',
       light: '#B2DFDB',
     },
@@ -13,12 +13,21 @@ const theme = {
     },
     divider: '#BDBDBD',
   },
+  typography: {
+    fontFamily: 'Lato,"Helvetica Neue",Helvetica,Arial,sans-serif',
+  },
   overrides: {
     MuiContainer: {
       root: {
         paddingTop: '3rem',
       },
     },
+    // MuiTab: {
+    //   wrapper: {
+    //     fontSize: 'larger',
+    //   },
+    // },
+
     // MuiTab: {
     //   root: {
     //     color: 'white',
@@ -30,7 +39,10 @@ const theme = {
   },
   props: {
     MuiTypography: {
-      gutterBottom: true,
+      paragraph: 'true',
+    },
+    MuiSvgIcon: {
+      htmlColor: '#000000',
     },
   },
 };

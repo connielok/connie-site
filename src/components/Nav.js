@@ -6,22 +6,25 @@ import {
   Tab,
   Switch,
   FormControlLabel,
-  Typography,
   Toolbar,
 } from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme, makeStyles } from '@material-ui/core/styles';
+import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   tab: {
-    minWidth: 100,
+    minWidth: 90,
+    fontSize: 'large',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 'small',
+    },
   },
-  title: {
-    flexGrow: 1,
-    marginRight: theme.spacing(2),
+  nav: {
+    justifyContent: 'space-between',
   },
   toggle: {
     marginLeft: theme.spacing(2),
@@ -30,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Nav = (props) => {
   const classes = useStyles();
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState('');
   const width = useWidth();
 
   const handleNavChange = (e, value) => {
@@ -40,57 +43,55 @@ const Nav = (props) => {
 
   return (
     <AppBar position="static" className={classes.root}>
-      <Toolbar>
-        <Typography variant="h4" color="secondary" className={classes.title}>
-          CL
-        </Typography>
+      <Toolbar className={classes.nav}>
+        <Link to={'/'}>
+          <HomeIcon color="textPrimar" />
+        </Link>
         <Tabs
           onChange={handleNavChange}
           value={`${value}`}
-          indicatorColor="secondary"
-          textColor="secondary"
           variant={width === 'xs' || width === 's' ? 'scrollable' : null}
         >
-          <Tab
+          {/* <Tab
             label="Home"
             component={Link}
             to={'/'}
             value="0"
             className={classes.tab}
-          />
+          /> */}
           <Tab
             label="About"
             component={Link}
             to={'/about'}
-            value="1"
+            value="0"
             className={classes.tab}
           />
           <Tab
             label="Projects"
             component={Link}
             to={'/projects'}
-            value="2"
+            value="1"
             className={classes.tab}
           />
-          <Tab
+          {/* <Tab
             label="Resume"
             component={Link}
             to={'/resume'}
             value="3"
             className={classes.tab}
-          />
+          /> */}
           <Tab
             label="Contact"
             component={Link}
             to={'/contact'}
-            value="4"
+            value="2"
             className={classes.tab}
           />
+          <FormControlLabel
+            control={<Switch onClick={props.toggleTheme} size="small" />}
+            className={classes.toggle}
+          />
         </Tabs>
-        <FormControlLabel
-          control={<Switch onClick={props.toggleTheme} size="small" />}
-          className={classes.toggle}
-        />
       </Toolbar>
     </AppBar>
   );
