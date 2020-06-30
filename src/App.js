@@ -36,6 +36,18 @@ const useDarkMode = () => {
         ...theme.palette,
         type: type === 'light' ? 'dark' : 'light',
       },
+      overrides: {
+        MuiSvgIcon: {
+          root: {
+            color: theme.palette.type === 'light' ? '#fff' : '#000',
+          },
+        },
+        MuiTab: {
+          textColorInherit: {
+            color: theme.palette.type === 'light' ? '#fff' : '#000',
+          },
+        },
+      },
     };
     setTheme(updatedTheme);
   };

@@ -2,16 +2,18 @@ const theme = {
   palette: {
     type: 'light',
     primary: {
-      main: '#009688',
-      dark: '#00796B',
-      light: '#B2DFDB',
+      main: '#7da8c7',
+      // dark: '#2A4B62',
+      // light: '#ACC8DC',
     },
     secondary: {
       main: '#fafafa',
-      dark: '#fafafa',
-      light: '#000000',
+      // dark: '#fafafa',
+      // light: '#000000',
     },
-    divider: '#BDBDBD',
+  },
+  typography: {
+    fontFamily: 'Lato,"Helvetica Neue",Helvetica,Arial,sans-serif',
   },
   overrides: {
     MuiContainer: {
@@ -19,18 +21,29 @@ const theme = {
         paddingTop: '3rem',
       },
     },
+    MuiSvgIcon: {
+      root: {
+        color: '#000',
+      },
+    },
     // MuiTab: {
-    //   root: {
-    //     color: 'white',
-    //     '&:hover': {
-    //       backgroundColor: 'purple',
-    //     },
+    //   wrapper: {
+    //     fontSize: 'larger',
     //   },
     // },
+
+    MuiTab: {
+      textColorInherit: {
+        color: '#000',
+        // '&:hover': {
+        //   backgroundColor: 'purple',
+        // },
+      },
+    },
   },
   props: {
     MuiTypography: {
-      gutterBottom: true,
+      paragraph: 'true',
     },
   },
 };

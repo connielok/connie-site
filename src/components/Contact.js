@@ -70,10 +70,10 @@ const Contact = () => {
         ) : (
           <div>
             <div className="contact">
-              <Typography variant="body2">
+              <Typography variant="body1">
                 I am currently looking for new opportunities.
               </Typography>
-              <Typography variant="body2">
+              <Typography variant="body1">
                 If you are interested in working together, please send me a
                 message here or through{' '}
                 <Link

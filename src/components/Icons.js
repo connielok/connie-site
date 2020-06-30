@@ -15,7 +15,6 @@ const Icons = (props) => {
               rel="noopener noreferrer"
               href="https://www.linkedin.com/in/conniehlok/"
             >
-              {/* <i className="fab fa-linkedin"></i> */}
               <LinkedInIcon />
             </Link>
           </Grid>
@@ -25,7 +24,6 @@ const Icons = (props) => {
               rel="noopener noreferrer"
               href="https://github.com/connielok"
             >
-              {/* <i className="fab fa-github"></i> */}
               <GitHubIcon />
             </Link>
           </Grid>
@@ -35,7 +33,6 @@ const Icons = (props) => {
               rel="noopener noreferrer"
               href="https://twitter.com/likeclokwork"
             >
-              {/* <i className="fab fa-twitter-square"></i> */}
               <TwitterIcon />
             </Link>
           </Grid>

@@ -25,6 +25,7 @@ const About = () => {
             electrical engineer for 4 years before deciding to make a switch to
             the software industry.
           </Typography>
+          <Typography>Click here for my resume.</Typography>
           <Typography variant="body1">
             These are some of the technologies I've been working with recently:
           </Typography>

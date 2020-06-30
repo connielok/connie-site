@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   main: {
-    minHeight: '90vh',
+    minHeight: '85vh',
   },
 }));
 
