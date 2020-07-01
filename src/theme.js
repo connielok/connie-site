@@ -3,7 +3,7 @@ const theme = {
     type: 'light',
     primary: {
       main: '#7da8c7',
-      // dark: '#2A4B62',
+      dark: '#34588b',
       // light: '#ACC8DC',
     },
     secondary: {
@@ -26,12 +26,6 @@ const theme = {
         color: '#000',
       },
     },
-    // MuiTab: {
-    //   wrapper: {
-    //     fontSize: 'larger',
-    //   },
-    // },
-
     MuiTab: {
       textColorInherit: {
         color: '#000',
@@ -40,11 +34,27 @@ const theme = {
         // },
       },
     },
+    MuiAppBar: {
+      colorPrimary: {
+        backgroundColor: '#7da8c7',
+      },
+    },
+    MuiButton: {
+      contained: {
+        backgroundColor: '#7da8c7',
+      },
+      label: {
+        color: '#000',
+      },
+    },
   },
   props: {
     MuiTypography: {
       paragraph: 'true',
     },
+    // MuiButton: {
+    //   color: 'primary',
+    // },
   },
 };
 

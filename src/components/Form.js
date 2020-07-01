@@ -53,7 +53,7 @@ const Form = (props) => {
           <Button
             type="submit"
             variant="contained"
-            color="primary"
+            // color="primary"
             endIcon={<SendIcon />}
           >
             Send
