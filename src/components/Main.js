@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import ProjectList from './ProjectList';
-import SingleProject from './SingleProject';
 import Resume from './Resume';
 import Contact from './Contact';
 import { makeStyles } from '@material-ui/core/styles';
