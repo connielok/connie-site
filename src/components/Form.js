@@ -40,7 +40,7 @@ const Form = (props) => {
             required
             multiline
             rows={4}
-            fullWidth
+            fullWidth={true}
             id="message"
             name="message"
             label="Message"

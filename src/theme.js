@@ -50,11 +50,8 @@ const theme = {
   },
   props: {
     MuiTypography: {
-      paragraph: 'true',
+      paragraph: true,
     },
-    // MuiButton: {
-    //   color: 'primary',
-    // },
   },
 };
 

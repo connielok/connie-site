@@ -40,27 +40,25 @@ const useDarkMode = () => {
         ...theme.overrides,
         MuiSvgIcon: {
           root: {
-            color: theme.palette.type === 'light' ? '#fafafa' : '#000',
+            color: type === 'light' ? '#fafafa' : '#000',
           },
         },
         MuiTab: {
           textColorInherit: {
-            color: theme.palette.type === 'light' ? '#fafafa' : '#000',
+            color: type === 'light' ? '#fafafa' : '#000',
           },
         },
         MuiAppBar: {
           colorPrimary: {
-            backgroundColor:
-              theme.palette.type === 'light' ? '#34588b' : '#7da8c7',
+            backgroundColor: type === 'light' ? '#34588b' : '#7da8c7',
           },
         },
         MuiButton: {
           contained: {
-            backgroundColor:
-              theme.palette.type === 'light' ? '#34588b' : '#7da8c7',
+            backgroundColor: type === 'light' ? '#34588b' : '#7da8c7',
           },
           label: {
-            color: theme.palette.type === 'light' ? '#fafafa' : '#000',
+            color: type === 'light' ? '#fafafa' : '#000',
           },
         },
       },
