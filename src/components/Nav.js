@@ -15,10 +15,6 @@ import HomeIcon from '@material-ui/icons/Home';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    // color:
-    //   theme.type === 'light'
-    //     ? theme.palette.primary.main
-    //     : theme.palette.primary.dark,
   },
   tab: {
     minWidth: 90,

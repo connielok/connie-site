@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  Typography,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Container,
-} from '@material-ui/core';
-import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
+import { Typography, Container, Link } from '@material-ui/core';
+import resume from '../documents/Resume.pdf';
 
 const About = () => {
   return (
@@ -25,53 +18,33 @@ const About = () => {
             electrical engineer for 4 years before deciding to make a switch to
             the software industry.
           </Typography>
-          <Typography>Click here for my resume.</Typography>
-          <Typography variant="body1">
-            These are some of the technologies I've been working with recently:
+          <Typography variant="h5" style={{ fontWeight: 700 }}>
+            Check me out on{' '}
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/conniehlok/"
+            >
+              LinkedIn
+            </Link>{' '}
+            or view my{' '}
+            <Link target="_blank" rel="noopener noreferrer" href={resume}>
+              resume
+            </Link>{' '}
+            for more information.
           </Typography>
-          <List className="tech" dense disablePadding>
-            <ListItem>
-              <ListItemIcon>
-                <DoubleArrowIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary="React" />
-            </ListItem>
-
-            <ListItem>
-              <ListItemIcon>
-                <DoubleArrowIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary="Redux" />
-            </ListItem>
-
-            <ListItem>
-              <ListItemIcon>
-                <DoubleArrowIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary="Node.js" />
-            </ListItem>
-
-            <ListItem>
-              <ListItemIcon>
-                <DoubleArrowIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary="Express" />
-            </ListItem>
-
-            <ListItem>
-              <ListItemIcon>
-                <DoubleArrowIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary="Sequelize" />
-            </ListItem>
-
-            <ListItem>
-              <ListItemIcon>
-                <DoubleArrowIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary="Material UI" />
-            </ListItem>
-          </List>
+          <Typography variant="h6">Technical Skills:</Typography>
+          <Typography variant="body1">
+            - Proficient: JavaScript, React, Redux, Node.js, Express, Git,
+            Sequelize, HTML, CSS, RESTful API, PostgreSQL, Material UI
+          </Typography>
+          <Typography variant="body1">
+            - Knowledgeable: AWS Lambda, Amazon DynamoDB, Amazon API Gateway
+          </Typography>
+          <Typography variant="body1">
+            - Familiar: TDD, Mocha, Chai, Enzyme, Jasmine, SQL, Webpack,
+            Reactstrap, Travis CI, Socket.io
+          </Typography>
         </div>
       </Container>
     </div>

@@ -16,6 +16,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '0.5rem',
     fontWeight: 300,
   },
+  header: {
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '4rem',
+    },
+  },
 }));
 
 const Home = () => {
@@ -30,7 +35,12 @@ const Home = () => {
           alignItems: 'center',
         }}
       >
-        <Typography variant="h1" align="center" style={{ fontWeight: '700' }}>
+        <Typography
+          variant="h1"
+          align="center"
+          className={classes.header}
+          style={{ fontWeight: '700' }}
+        >
           Connie Lok
         </Typography>
         <Typography

@@ -81,7 +81,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   href="https://www.linkedin.com/in/conniehlok/"
                 >
-                  Linkedin
+                  LinkedIn
                 </Link>
                 .
               </Typography>

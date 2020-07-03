@@ -37,14 +37,28 @@ const useDarkMode = () => {
         type: type === 'light' ? 'dark' : 'light',
       },
       overrides: {
+        ...theme.overrides,
         MuiSvgIcon: {
           root: {
-            color: theme.palette.type === 'light' ? '#fff' : '#000',
+            color: type === 'light' ? '#fafafa' : '#000',
           },
         },
         MuiTab: {
           textColorInherit: {
-            color: theme.palette.type === 'light' ? '#fff' : '#000',
+            color: type === 'light' ? '#fafafa' : '#000',
+          },
+        },
+        MuiAppBar: {
+          colorPrimary: {
+            backgroundColor: type === 'light' ? '#34588b' : '#7da8c7',
+          },
+        },
+        MuiButton: {
+          contained: {
+            backgroundColor: type === 'light' ? '#34588b' : '#7da8c7',
+          },
+          label: {
+            color: type === 'light' ? '#fafafa' : '#000',
           },
         },
       },
