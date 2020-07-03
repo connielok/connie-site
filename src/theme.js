@@ -33,7 +33,11 @@ const theme = {
         //   backgroundColor: 'purple',
         // },
       },
+      // root: {
+      //   padding: '6px 0px',
+      // },
     },
+
     MuiAppBar: {
       colorPrimary: {
         backgroundColor: '#7da8c7',
@@ -56,6 +60,12 @@ const theme = {
       },
       h5: {
         paddingBottom: '1rem',
+      },
+    },
+    MuiButtonBase: {
+      root: {
+        paddingLeft: '0',
+        paddingRight: '0',
       },
     },
   },

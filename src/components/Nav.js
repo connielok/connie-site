@@ -8,33 +8,56 @@ import {
   FormControlLabel,
   Toolbar,
 } from '@material-ui/core';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useTheme, makeStyles } from '@material-ui/core/styles';
+// import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { makeStyles } from '@material-ui/core/styles';
 import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
+  tabspanel: {
+    display: 'flex',
   },
   tab: {
-    minWidth: 90,
+    [theme.breakpoints.up('sm')]: {
+      minWidth: 110,
+    },
+    minWidth: 68,
     fontSize: 'large',
     [theme.breakpoints.down('sm')]: {
       fontSize: 'small',
     },
+    '&:hover': {
+      color: '#fafafa',
+    },
+    flexGrow: 1,
+    flexBasis: '1rem',
+    flexShrink: '1rem',
+    padding: '0',
+  },
+  home: {
+    minWidth: 50,
+    '&:hover': {
+      color: '#fafafa',
+    },
+    flexGrow: 1,
+    flexBasis: '1rem',
+    flexShrink: '1rem',
+    padding: '0',
   },
   nav: {
     justifyContent: 'flex-end',
   },
   toggle: {
-    marginLeft: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(1),
+    },
+    marginLeft: '.3rem',
   },
 }));
 
 const Nav = (props) => {
   const classes = useStyles();
   const [value, setValue] = useState('');
-  const width = useWidth();
+  // const width = useWidth();
 
   const handleNavChange = (e, value) => {
     setValue(value);
@@ -42,19 +65,22 @@ const Nav = (props) => {
   };
 
   return (
-    <AppBar position="static" className={classes.root}>
-      <Toolbar className={classes.nav}>
+    <AppBar position="static">
+      <Toolbar className={classes.nav} disableGutters={true}>
         <Tabs
           onChange={handleNavChange}
           value={`${value}`}
-          variant={width === 'xs' || width === 's' ? 'scrollable' : null}
+          // variant={width === 'xs' || width === 's' ? 'scrollable' : null}
+          scrollButtons="auto"
+          variant="scrollable"
         >
           <Tab
+            style={{ paddingLeft: 0, paddingRight: 0 }}
             label={<HomeIcon />}
             component={Link}
             to={'/'}
             value="0"
-            className={classes.tab}
+            className={classes.home}
           />
           <Tab
             label="About"
@@ -114,16 +140,16 @@ const Nav = (props) => {
   );
 };
 
-function useWidth() {
-  const theme = useTheme();
-  const keys = [...theme.breakpoints.keys].reverse();
-  return (
-    keys.reduce((output, key) => {
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const matches = useMediaQuery(theme.breakpoints.up(key));
-      return !output && matches ? key : output;
-    }, null) || 'xs'
-  );
-}
+// function useWidth() {
+//   const theme = useTheme();
+//   const keys = [...theme.breakpoints.keys].reverse();
+//   return (
+//     keys.reduce((output, key) => {
+//       // eslint-disable-next-line react-hooks/rules-of-hooks
+//       const matches = useMediaQuery(theme.breakpoints.up(key));
+//       return !output && matches ? key : output;
+//     }, null) || 'xs'
+//   );
+// }
 
 export default Nav;
