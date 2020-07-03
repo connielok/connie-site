@@ -6,7 +6,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 
 const Icons = (props) => {
   return (
-    <div style={{ paddingTop: '1rem' }}>
+    <div>
       <Grid container direction="column" align="center">
         <Grid container item spacing={3} justify="center">
           <Grid item>

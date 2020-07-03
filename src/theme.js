@@ -47,12 +47,23 @@ const theme = {
         color: '#000',
       },
     },
-  },
-  props: {
     MuiTypography: {
-      paragraph: true,
+      h3: {
+        paddingBottom: '1rem',
+      },
+      body1: {
+        paddingBottom: '1rem',
+      },
+      h5: {
+        paddingBottom: '1rem',
+      },
     },
   },
+  // props: {
+  // MuiTypography: {
+  //   paragraph: true,
+  // },
+  // },
 };
 
 export default theme;

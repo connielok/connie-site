@@ -25,7 +25,7 @@ const Main = () => {
     <div id="main" className={classes.main}>
       <Switch>
         <Route path="/about" component={About} />
-        <Route path="/projects/:id" component={SingleProject} />
+        {/* <Route path="/projects/:id" component={SingleProject} /> */}
         <Route path="/projects" component={ProjectList} />
         <Route path="/resume" component={Resume} />
         <Route path="/contact" component={Contact} />

@@ -23,7 +23,7 @@ const SingleProject = (props) => {
     <div className="project">
       <Container maxWidth="md">
         <Typography variant="h3">{project.title}</Typography>
-        <img alt="project" src={`${project.image}`} />
+        <img alt="project" src={`${project.image}`} height="300rem" />
         <Typography variant="body2">{project.description}</Typography>
       </Container>
     </div>

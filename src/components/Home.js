@@ -46,7 +46,7 @@ const Home = () => {
         <Typography
           variant="h4"
           align="center"
-          style={{ paddingBottom: '2rem' }}
+          style={{ paddingBottom: '1rem' }}
         >
           Software Engineer
         </Typography>

@@ -4,7 +4,7 @@ import Icons from './Icons';
 
 const Footer = () => {
   return (
-    <div className="footer" style={{ marginTop: 'auto' }}>
+    <div className="footer" style={{ marginTop: '1.5rem' }}>
       <Icons />
       <Grid container spacing={3} justify="center">
         <Grid item>

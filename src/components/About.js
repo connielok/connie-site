@@ -33,7 +33,9 @@ const About = () => {
             </Link>{' '}
             for more information.
           </Typography>
-          <Typography variant="h6">Technical Skills:</Typography>
+          <Typography variant="h6" style={{ textDecoration: 'underline' }}>
+            Technical Skills:
+          </Typography>
           <Typography variant="body1">
             - Proficient: JavaScript, React, Redux, Node.js, Express, Git,
             Sequelize, HTML, CSS, RESTful API, PostgreSQL, Material UI
