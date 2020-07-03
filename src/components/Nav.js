@@ -11,6 +11,8 @@ import {
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme, makeStyles } from '@material-ui/core/styles';
 import HomeIcon from '@material-ui/icons/Home';
+import Brightness5Icon from '@material-ui/icons/Brightness5';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -85,7 +87,25 @@ const Nav = (props) => {
             className={classes.tab}
           />
           <FormControlLabel
-            control={<Switch onClick={props.toggleTheme} size="small" />}
+            control={
+              <Switch
+                onClick={props.toggleTheme}
+                checkedIcon={
+                  <img
+                    src="https://img.icons8.com/color/48/000000/smiling-sun.png"
+                    weight="23"
+                    height="23"
+                  />
+                }
+                icon={
+                  <img
+                    src="https://img.icons8.com/color/48/000000/waxing-gibbous.png"
+                    weight="23"
+                    height="23"
+                  />
+                }
+              />
+            }
             className={classes.toggle}
           />
         </Tabs>

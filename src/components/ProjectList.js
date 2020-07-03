@@ -24,7 +24,7 @@ const ProjectList = () => {
       <Container maxWidth="md">
         <Typography variant="h3">Projects</Typography>
         <div className="project-list">
-          <Grid container spacing={2}>
+          <Grid container spacing={4}>
             {projects.length ? <Projects projects={projects} /> : null}
           </Grid>
         </div>
