@@ -45,6 +45,9 @@ const useStyles = makeStyles((theme) => ({
   },
   nav: {
     justifyContent: 'flex-end',
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: 'center',
+    },
   },
   toggle: {
     [theme.breakpoints.up('sm')]: {
@@ -96,13 +99,6 @@ const Nav = (props) => {
             value="2"
             className={classes.tab}
           />
-          {/* <Tab
-            label="Resume"
-            component={Link}
-            to={'/resume'}
-            value="3"
-            className={classes.tab}
-          /> */}
           <Tab
             label="Contact"
             component={Link}
@@ -116,17 +112,17 @@ const Nav = (props) => {
                 onClick={props.toggleTheme}
                 checkedIcon={
                   <img
-                    src="https://img.icons8.com/color/48/000000/smiling-sun.png"
-                    weight="23"
-                    height="23"
+                    src="https://img.icons8.com/color/48/000000/waxing-gibbous.png"
+                    weight="20"
+                    height="20"
                     alt=""
                   />
                 }
                 icon={
                   <img
-                    src="https://img.icons8.com/color/48/000000/waxing-gibbous.png"
-                    weight="23"
-                    height="23"
+                    src="https://img.icons8.com/emoji/48/000000/sun-emoji.png"
+                    weight="20"
+                    height="20"
                     alt=""
                   />
                 }
