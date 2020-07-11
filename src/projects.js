@@ -9,7 +9,7 @@ const projectsArr = [
     shortDesc:
       'An e-commerce site that offers products deemed essential during a national pandemic. Developed using Node.js, Express, Sequelize, React, Redux, Mocha, and Chai.',
     github: 'https://www.rb.gy/keatkh',
-    website: 'http://pandemic-essentials.herokuapp.com/',
+    website: 'https://pandemic-essentials.herokuapp.com/',
   },
   {
     id: 2,

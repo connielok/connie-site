@@ -16,6 +16,13 @@ const theme = {
     fontFamily: 'Lato,"Helvetica Neue",Helvetica,Arial,sans-serif',
   },
   overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        'html, body, #root': {
+          height: '100%',
+        },
+      },
+    },
     MuiContainer: {
       root: {
         paddingTop: '3rem',
@@ -56,7 +63,7 @@ const theme = {
         paddingBottom: '1rem',
       },
       body1: {
-        paddingBottom: '1rem',
+        paddingBottom: '.5rem',
       },
       h5: {
         paddingBottom: '1rem',
