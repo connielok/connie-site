@@ -1,5 +1,6 @@
 import pandemicEssentials from './components/img/pandemic-essentials.png';
 import secretApp from './components/img/secret-app.png';
+import liftLog from './components/img/lift-log.png';
 
 const projectsArr = [
   {
@@ -7,7 +8,7 @@ const projectsArr = [
     title: 'Pandemic Essentials',
     image: pandemicEssentials,
     shortDesc:
-      'An e-commerce site that offers products deemed essential during a national pandemic. Developed using Node.js, Express, Sequelize, React, Redux, Mocha, and Chai.',
+      'An e-commerce site that offers products deemed essential during a national pandemic. Get your toilet paper, board games, and face masks here! Developed using Node.js, Express, Sequelize, React, Redux, Mocha, and Chai.',
     github: 'https://www.rb.gy/keatkh',
     website: 'https://pandemic-essentials.herokuapp.com/',
   },
@@ -16,18 +17,19 @@ const projectsArr = [
     title: 'Keep It Secret',
     image: secretApp,
     shortDesc:
-      'A web app that allows users to share secret messages with those they trust. Developed with AWS Lambda, Amazon DynamoDB, Amazon API Gateway, React, and Material UI.',
+      'A single page application that allows users to share secret messages with those they trust. Developed with AWS Lambda, Amazon DynamoDB, Amazon API Gateway, React, and Material UI.',
     github: 'https://www.rb.gy/fjdu9q',
     website: 'https://keepitsecret.netlify.app/#/',
   },
-  // {
-  //   id: 3,
-  //   title: 'Capstone',
-  //   image: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
-  //   shortDesc: 'Capstone project.',
-  //   description:
-  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-  // },
+  {
+    id: 3,
+    title: 'Lift Log',
+    image: liftLog,
+    shortDesc:
+      'Lift Log is a web application and weightlifting tracker. Lift Log automatically detects and logs exercises as you are working out, eliminating the need of manually tracking for weightlifters.',
+    github: 'https://github.com/capstone-2004-team-awesome/Lift-Log',
+    website: 'https://lift-log-pro.herokuapp.com/',
+  },
 ];
 
 export default projectsArr;
