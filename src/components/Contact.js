@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Form from './Form';
 import { Typography, Container, Link } from '@material-ui/core';
-// import axios from 'axios';
 
 const encode = (data) => {
   return Object.keys(data)
