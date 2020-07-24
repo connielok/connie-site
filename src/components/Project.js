@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import {
   Typography,
   Grid,
@@ -10,17 +9,20 @@ import {
   Button,
   Link,
 } from '@material-ui/core';
+import projectsArr from '../projects';
 
 const Projects = (props) => {
-  const projects = props.projects;
-  return projects.map((project) => {
+  return projectsArr.map((project) => {
     return (
-      <Grid key={project.id} item xs={12} sm={6} lg={6} xl={6}>
-        <Card variant="outlined">
+      <Grid key={project.id} item xs={12} sm={6} lg={4} xl={4}>
+        <Card variant="outlined" style={{ height: '100%' }}>
           <CardMedia
             image={project.image}
             title="project-image"
-            style={{ height: '25rem' }}
+            style={{
+              height: '20rem',
+              minWidth: '15rem',
+            }}
             component="img"
           />
           <CardContent>
@@ -30,20 +32,20 @@ const Projects = (props) => {
           <CardActions disableSpacing>
             <Button color="primary">
               <Link
-                href={project.website}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Website
-              </Link>
-            </Button>
-            <Button color="primary">
-              <Link
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Github
+              </Link>
+            </Button>
+            <Button color="primary">
+              <Link
+                href={project.website}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Website
               </Link>
             </Button>
           </CardActions>
