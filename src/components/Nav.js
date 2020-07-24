@@ -8,7 +8,6 @@ import {
   FormControlLabel,
   Toolbar,
 } from '@material-ui/core';
-// import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles } from '@material-ui/core/styles';
 import HomeIcon from '@material-ui/icons/Home';
 
@@ -60,7 +59,6 @@ const useStyles = makeStyles((theme) => ({
 const Nav = (props) => {
   const classes = useStyles();
   const [value, setValue] = useState('');
-  // const width = useWidth();
 
   const handleNavChange = (e, value) => {
     setValue(value);
@@ -73,7 +71,6 @@ const Nav = (props) => {
         <Tabs
           onChange={handleNavChange}
           value={`${value}`}
-          // variant={width === 'xs' || width === 's' ? 'scrollable' : null}
           scrollButtons="auto"
           variant="scrollable"
         >
@@ -135,17 +132,5 @@ const Nav = (props) => {
     </AppBar>
   );
 };
-
-// function useWidth() {
-//   const theme = useTheme();
-//   const keys = [...theme.breakpoints.keys].reverse();
-//   return (
-//     keys.reduce((output, key) => {
-//       // eslint-disable-next-line react-hooks/rules-of-hooks
-//       const matches = useMediaQuery(theme.breakpoints.up(key));
-//       return !output && matches ? key : output;
-//     }, null) || 'xs'
-//   );
-// }
 
 export default Nav;
