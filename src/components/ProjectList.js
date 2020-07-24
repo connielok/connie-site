@@ -5,7 +5,7 @@ import Project from './Project';
 const ProjectList = () => {
   return (
     <div className="projects">
-      <Container maxWidth="lg">
+      <Container>
         <Typography variant="h3">Projects</Typography>
         <div className="project-list">
           <Grid container spacing={4}>
