@@ -5,7 +5,7 @@ import resume from '../documents/Resume.pdf';
 const About = () => {
   return (
     <div>
-      <Container maxWidth="md">
+      <Container>
         <Typography variant="h3">Hi, I'm Connie.</Typography>
         <div className="about">
           <Typography variant="body1">

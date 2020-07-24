@@ -10,6 +10,7 @@ const Form = (props) => {
       onSubmit={props.handleSubmit}
       method="POST"
       data-netlify="true"
+      style={{ paddingTop: '1rem' }}
     >
       <input type="hidden" name="form-name" value="contact-form" />
       <Grid container spacing={2} direction="column">

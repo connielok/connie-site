@@ -26,6 +26,7 @@ const theme = {
     MuiContainer: {
       root: {
         paddingTop: '3rem',
+        maxWidth: 'lg',
       },
     },
     MuiSvgIcon: {

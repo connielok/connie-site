@@ -50,11 +50,11 @@ const Contact = () => {
 
   return (
     <div>
-      <Container maxWidth="md">
+      <Container>
         <Typography variant="h3">Let's Connect</Typography>
         {sentVerification ? (
           <div>
-            <Container maxWidth="md">
+            <Container>
               <Typography variant="body2">
                 <span role="img" aria-label="sparkles">
                   ✨✨✨
