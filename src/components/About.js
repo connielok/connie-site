@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Container, Link } from '@material-ui/core';
-import resume from '../documents/Resume.pdf';
+import resume from '../documents/ConnieLok_Resume.pdf';
 
 const About = () => {
   return (
@@ -32,21 +32,6 @@ const About = () => {
               resume
             </Link>{' '}
             for more information.
-          </Typography>
-          <Typography variant="h6" style={{ textDecoration: 'underline' }}>
-            Technical Skills:
-          </Typography>
-          <Typography variant="body1">
-            - Proficient: JavaScript, React, Redux, Node.js, Express, Git,
-            Sequelize, HTML, CSS, RESTful API, PostgreSQL, Material UI
-          </Typography>
-          <Typography variant="body1">
-            - Knowledgeable: AWS Lambda, Amazon DynamoDB, Amazon API Gateway,
-            SQL
-          </Typography>
-          <Typography variant="body1">
-            - Familiar: TDD, Mocha, Chai, Enzyme, Jasmine, Webpack, Reactstrap,
-            Travis CI
           </Typography>
         </div>
       </Container>
