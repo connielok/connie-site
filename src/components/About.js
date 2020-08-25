@@ -14,9 +14,10 @@ const About = () => {
           <Typography variant="body1">
             I love coding like I love puzzles - it may take a while to to figure
             out the patterns, but it's so satisfying when all the pieces finally
-            fit together. I worked in the building design/construction industry
-            as an electrical engineer for 4 years before deciding to make a
-            switch to the software industry.
+            fit together. Prior to software engineering, I worked in the
+            building design/construction industry as an electrical engineer for
+            4 years. I recently graduated from The Grace Hopper Program at
+            Fullstack Academy and am so excited to start my new career!
           </Typography>
           <Typography variant="h5" style={{ fontWeight: 700 }}>
             Check me out on{' '}
